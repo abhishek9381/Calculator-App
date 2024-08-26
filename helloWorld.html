@@ -1,0 +1,159 @@
+<template>
+   <lightning-card title="CALCULATOR App">
+      <div class="resultpanel">4Note:click on reset to start a new calculation</div>
+
+      <template if:true={banner1}>
+         <div>
+            <lightning-input class="input" value={inputbox} label="enter input-1" ></lightning-input>  
+            <div class="confirmbutton">
+               <lightning-button  label="confirm input" variant="destructive" onclick={confirmhandler1}></lightning-button>
+   
+            </div>      
+                    
+            </div>
+
+      </template>
+
+      <template if:true={banner2}>
+         <div>
+            <lightning-input class="input" value={inputbox} label="enter input-2" ></lightning-input>  
+            <div class="confirmbutton">
+               <lightning-button  label="confirm input" variant="destructive" onclick={confirmhandler2}></lightning-button>
+   
+            </div>      
+                    
+            </div>
+
+      </template>
+      <template if:true={banner3}>
+         <div class="finalresultbanner">
+           final result is {finalresult}     
+                    
+            </div>
+
+      </template>
+
+      <div class="numberpad">
+         <div class="line">
+
+            <div class="slds-grid slds-gutters">
+               <div class="slds-col">
+               
+                  <lightning-button class="buttonz" label="1" variant="brand" onclick={buttonhandler}></lightning-button>
+               
+               </div>
+               <div class="slds-col">
+                <lightning-button class="buttonz" label="2" variant="brand"  onclick={buttonhandler}></lightning-button>
+               </div>
+               <div class="slds-col">
+                <lightning-button class="buttonz" label="3" variant="brand"  onclick={buttonhandler}></lightning-button>
+               </div>
+               </div>
+            </div>
+      
+            <div class="line">
+      
+               <div class="slds-grid slds-gutters">
+                  <div class="slds-col">
+                  
+                     <lightning-button class="buttonz" label="4" variant="brand" onclick={buttonhandler}></lightning-button>
+                  
+                  </div>
+                  <div class="slds-col">
+                   <lightning-button class="buttonz" label="5" variant="brand"  onclick={buttonhandler}></lightning-button>
+                  </div>
+                  <div class="slds-col">
+                   <lightning-button class="buttonz" label="6" variant="brand"  onclick={buttonhandler}></lightning-button>
+                  </div>
+                  </div>
+               </div>
+      
+               <div class="line">
+      
+                  <div class="slds-grid slds-gutters">
+                     <div class="slds-col">
+                     
+                        <lightning-button class="buttonz" label="7" variant="brand" onclick={buttonhandler}></lightning-button>
+                     
+                     </div>
+                     <div class="slds-col">
+                      <lightning-button class="buttonz" label="8" variant="brand"  onclick={buttonhandler}></lightning-button>
+                     </div>
+                     <div class="slds-col">
+                      <lightning-button class="buttonz" label="9" variant="brand"  onclick={buttonhandler}></lightning-button>
+                     </div>
+                     </div>
+                  </div>
+      
+                  <div class="zero">
+                     <lightning-button class="buttonz" label="0" variant="brand"  onclick={buttonhandler}></lightning-button>
+                    </div>
+      
+
+      </div>
+
+      
+         <div class="mathfunctions">
+            <div class="line">
+
+               <div class="slds-grid slds-gutters">
+                  <div class="slds-col">
+                  
+                     <lightning-button class="buttonz" label="add" variant="brand" onclick={addhandler}></lightning-button>
+                  
+                  </div>
+                  <div class="slds-col">
+                   <lightning-button class="buttonz" label="subtract" variant="brand"  onclick={subtracthandler}></lightning-button>
+                  </div>
+                  <div class="slds-col">
+                   <lightning-button class="buttonz" label="multiply" variant="brand"  onclick={multiplyhandler}></lightning-button>
+                  </div>
+
+                  <div class="slds-col">
+                     <lightning-button class="buttonz" label="divide" variant="brand"  onclick={dividehandler}></lightning-button>
+                    </div>
+                  </div>
+               </div>
+
+            <div class="line">
+
+               <div class="slds-grid slds-gutters">
+
+                  <div class="slds-col">
+                     <lightning-button class="buttonz" label="." variant="brand"  onclick={buttonhandler}></lightning-button>
+                    </div>
+
+                  <div class="slds-col">      
+                     <lightning-button class="buttonz" label="back" variant="brand" disabled={disableback} onclick={backhandler}></lightning-button>               
+                  </div>
+
+                  <div class="slds-col">
+                   <lightning-button class="buttonz" label="RESET" variant="destructive"  onclick={resetbuttonhandler}></lightning-button>
+                  </div>
+
+                  <div class="slds-col">
+                   <lightning-button class="buttonz" label="ENTER" variant="brand"  onclick={enterhandler}></lightning-button>
+                  </div>
+
+                  </div>
+
+
+                  
+
+
+
+
+
+               </div>
+         </div>
+      
+
+
+     
+           
+
+  
+   
+   </lightning-card>
+    
+</template>
